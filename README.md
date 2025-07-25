@@ -7,18 +7,15 @@ This repository implements a machine learning pipeline for detecting epileptic s
 ## 📋 Table of Contents
 
 1. [Overview](#overview)  
-2. [Project Structure](#project-structure)  
-3. [Features](#features)  
-4. [Prerequisites](#prerequisites)  
-5. [Installation & Setup](#installation--setup)  
-6. [Dataset](#dataset)  
-7. [Data Preprocessing & Feature Extraction](#data-preprocessing--feature-extraction)  
-8. [Modeling](#modeling)  
-9. [Training & Evaluation](#training--evaluation)  
-10. [Results](#results)  
-11. [Usage](#usage)  
-12. [Customization & Extensions](#customization--extensions)  
-13. [Troubleshooting](#troubleshooting)  
+2. [Features](#features)  
+3. [Prerequisites](#prerequisites)  
+4. [Installation & Setup](#installation--setup)  
+5. [Dataset](#dataset)  
+6. [Data Preprocessing & Feature Extraction](#data-preprocessing--feature-extraction)  
+7. [Modeling](#modeling)  
+8. [Results](#results)  
+9. [Customization & Extensions](#customization--extensions)  
+10. [Troubleshooting](#troubleshooting)  
 ---
 
 ## Overview
@@ -62,74 +59,37 @@ This project focuses on automatic detection of epileptic seizures from EEG recor
 ## Dataset
 
 - Public EEG datasets (e.g., Bonn University dataset) containing seizure and non-seizure segments.  
-- Original `.mat` or CSV files are stored in `data/raw/`.  
-- Processed feature CSVs are in `data/processed/`.
-
----
 
 ## Data Preprocessing & Feature Extraction
 
 - **Filtering**: Bandpass filter EEG signals to remove artifacts.  
 - **Segmentation**: Split continuous EEG into fixed-length windows (e.g., 5 seconds).  
-- **Entropy Calculation**: Compute various entropy measures per segment using `src/preprocessing.py`.
+- **Entropy Calculation**: Compute various entropy measures per segment.
 
 ---
 
 ## Modeling
 
-- Configure model and hyperparameters in `src/train.py` (e.g., number of trees for Random Forest, kernel choice for SVM).  
+- Configure model and hyperparameters (e.g., number of trees for Random Forest, kernel choice for SVM).  
 - Use cross-validation to select the best-performing classifier.
-
----
-
-## Training & Evaluation
-
-- **Train**:
-  ```bash
-  python src/train.py --config configs/train_config.yaml --output-dir models/
-  ```
-- **Evaluate**:
-  ```bash
-  python src/evaluate.py --model-path models/best_model.pkl --test-data data/processed/test_features.csv
-  ```
 
 ---
 
 ## Results
 
-- Performance metrics including accuracy, precision, recall, F1-score, and ROC-AUC.  
-- Visualizations generated in `notebooks/analysis.ipynb`.
-
----
-
-## Usage
-
-1. Preprocess and extract features:
-   ```bash
-   python src/preprocessing.py --input data/raw/ --output data/processed/
-   ```
-2. Train models:
-   ```bash
-   python src/train.py --config configs/train_config.yaml
-   ```
-3. Run evaluation:
-   ```bash
-   python src/evaluate.py
-   ```
-
+- Performance metrics including accuracy, precision, recall, F1-score, and ROC-AUC.
+  
 ---
 
 ## Customization & Extensions
 
 - **Additional Features**: Integrate other time-domain or frequency-domain features.  
-- **Deep Learning Models**: Replace classifiers with CNN/LSTM-based architectures.  
-- **Real-Time Detection**: Implement streaming inference for live EEG data.
+- **Deep Learning Models**: Replace classifiers with CNN/LSTM-based architectures. 
 
 ---
 
 ## Troubleshooting
 
-- **Import Errors**: Verify that `src/` is in Python path or install as module.  
 - **Data Shape Mismatch**: Ensure consistent window sizes and feature dimensions.  
 - **Model Overfitting**: Apply regularization or increase dataset size.
   
