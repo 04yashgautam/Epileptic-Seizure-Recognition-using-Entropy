@@ -9,16 +9,16 @@ A machine learning pipeline for detecting epileptic seizures from EEG signals us
 
 ## 📋 Table of Contents
 
-1. [📌 Overview](#overview)
-2. [✨ Features](#features)
-3. [🛠️ Prerequisites](#prerequisites)
-4. [⚙️ Installation & Setup](#installation--setup)
-5. [📊 Dataset](#dataset)
-6. [🔍 Data Preprocessing & Feature Extraction](#data-preprocessing--feature-extraction)
-7. [🧪 Modeling](#modeling)
-8. [📈 Results](#results)
-9. [🧩 Customization & Extensions](#customization--extensions)
-10. [🐛 Troubleshooting](#troubleshooting)
+1. 📌[Overview](#overview)
+2. ✨[Features](#features)
+3. 🛠️[Prerequisites](#prerequisites)
+4. ⚙️[Installation & Setup](#installation--setup)
+5. 📊[Dataset](#dataset)
+6. 🔍[Data Preprocessing & Feature Extraction](#data-preprocessing--feature-extraction)
+7. 🧪[Modeling](#modeling)
+8. 📈[Results](#results)
+9. 🧩[Customization & Extensions](#customization--extensions)
+10. 🐛[Troubleshooting](#troubleshooting)
 
 ---
 
